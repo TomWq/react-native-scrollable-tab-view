@@ -73,17 +73,4 @@ To start you can just copy [DefaultTabBar](https://github.com/skv-headless/react
 - **`scrollWithoutAnimation`** _(Bool)_ - on tab press change tab without animation.
 - **`prerenderingSiblingsNumber`** _(Integer)_ - pre-render nearby # sibling, `Infinity` === render all the siblings, default to 0 === render current page.
 
-## Contribution
-**Issues** are welcome. Please add a screenshot of bug and code snippet. Quickest way to solve issue is to reproduce it on one of the examples.
-
-**Pull requests** are welcome. If you want to change API or making something big better to create issue and discuss it first. Before submiting PR please run ```eslint .``` Also all eslint fixes are welcome.
-
-Please attach video or gif to PR's and issues it is super helpful.
-
-<a href="http://www.abeautifulsite.net/recording-a-screencast-with-quicktime/" target="_blank">How to make video</a>
-
-<a href="https://github.com/jclem/gifify" target="_blank">How to make gif from video</a>
-
----
-
 **MIT Licensed**
