@@ -4,46 +4,40 @@
 ## Add it to your project
 
 1. Run `npm install react-native-scrollable-tab-view --save`
-2. `var ScrollableTabView = require('react-native-scrollable-tab-view');`
+2. `import ScrollableTabView from 'react-native-scrollable-tab-view';`
 
 ## Basic usage
 
 ```javascript
-var ScrollableTabView = require('react-native-scrollable-tab-view');
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 
-var App = React.createClass({
-  render() {
-    return (
-      <ScrollableTabView>
-        <ReactPage tabLabel="React" />
-        <FlowPage tabLabel="Flow" />
-        <JestPage tabLabel="Jest" />
-      </ScrollableTabView>
-    );
-  }
-});
+const App = () => (
+  <ScrollableTabView>
+    <ReactPage tabLabel="React" />
+    <FlowPage tabLabel="Flow" />
+    <JestPage tabLabel="Jest" />
+  </ScrollableTabView>
+);
 ```
 
 ## Injecting a custom tab bar
 
-Suppose we had a custom tab bar called `CustomTabBar`, we would inject
+Suppose we had a custom tab bar called `ScrollableTabBar`, we would inject
 it into our `ScrollableTabView` like this:
 
 ```javascript
-var ScrollableTabView = require('react-native-scrollable-tab-view');
-var CustomTabBar = require('./CustomTabBar');
+import ScrollableTabView,{DefaultTabBar,ScrollableTabBar} from 'react-native-scrollable-tab-view';
 
-var App = React.createClass({
-  render() {
-    return (
-      <ScrollableTabView renderTabBar={() => <CustomTabBar someProp={'here'} />}>
+const App = () => (
+  return(
+      <ScrollableTabView renderTabBar={() => <ScrollableTabBar />}>
         <ReactPage tabLabel="React" />
         <FlowPage tabLabel="Flow" />
         <JestPage tabLabel="Jest" />
       </ScrollableTabView>
-    );
-  }
-});
+  )
+);
+
 ```
 To start you can just copy [DefaultTabBar](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/DefaultTabBar.js).
 

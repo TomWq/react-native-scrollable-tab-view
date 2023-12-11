@@ -308,4 +308,4 @@ const styles = StyleSheet.create({
     },
 });
 
-module.exports = CustomTabBar;
+export default CustomTabBar;
